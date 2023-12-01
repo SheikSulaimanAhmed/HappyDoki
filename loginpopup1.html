@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Signup and Sign In Form</title>
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
+  <script>
+    function showVendorFields() {
+      var vendorFields = document.getElementById("vendorFields");
+      vendorFields.style.display = "block";
+    }
+
+    function hideVendorFields() {
+      var vendorFields = document.getElementById("vendorFields");
+      vendorFields.style.display = "none";
+    }
+
+    function hideSignupForm() {
+      var signupForm = document.getElementById("signupForm");
+      signupForm.style.display = "none";
+    }
+
+    function showSignInForm() {
+      var signupForm = document.getElementById("signupForm");
+      signupForm.style.display = "none";
+      var signInForm = document.getElementById("signInForm");
+      signInForm.style.display = "block";
+    }
+
+    function showSignupForm() {
+      var signInForm = document.getElementById("signInForm");
+      signInForm.style.display = "none";
+      var signupForm = document.getElementById("signupForm");
+      signupForm.style.display = "block";
+    }
+  </script>
+</head>
+<body>
+  <button onclick="document.getElementById('signupForm').style.display='block'; this.style.display='none'">Signup</button>
+
+  <div id="signupForm" class="hidden">
+    <form>
+      <input type="radio" name="userType" value="buyer" onclick="hideVendorFields()" checked> Buyer
+      <input type="radio" name="userType" value="seller" onclick="hideVendorFields()"> Seller
+      <input type="radio" name="userType" value="vendor" onclick="showVendorFields()"> Vendor
+      <br><br>
+
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" name="firstName" required><br><br>
+
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" name="lastName" required><br><br>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="mobile">Mobile Number:</label>
+      <input type="tel" id="mobile" name="mobile" required><br><br>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required><br><br>
+
+      <div id="vendorFields" class="hidden">
+        <label for="uploadCR">Upload CR:</label>
+        <input type="file" id="uploadCR" name="uploadCR"><br><br>
+      </div>
+
+      <input type="submit" value="Signup">
+      <button type="button" onclick="showSignInForm()">Sign In</button>
+    </form>
+  </div>
+
+  <div id="signInForm" class="hidden">
+    <form>
+      <label for="signInEmail">Email Address:</label>
+      <input type="email" id="signInEmail" name="signInEmail" required><br><br>
+
+      <label for="signInPassword">Password:</label>
+      <input type="password" id="signInPassword" name="signInPassword" required><br><br>
+<input type="submit" value="SignIn">
+      <button type="button" onclick="showSignupForm()">Sign Up</button>
+    </form>
+  </div>
+</body>
+</html>

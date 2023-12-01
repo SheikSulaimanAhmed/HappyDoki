@@ -1,0 +1,538 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Domine&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+
+    <style>
+        body {
+            / background: linear-gradient(to right, #0f2027, #203a43, #2c5364);/ font-family: 'Poppins', sans-serif;
+        }
+
+        .reg-img img {
+            width: 80%;
+        }
+
+        .reg-img {
+            margin: 100px auto 0 auto;
+            text-align: center;
+        }
+
+        .reg-img h2 {
+            text-align: center;
+            color: #000000;
+            margin-bottom: 12px;
+            font-family: Domine;
+        }
+
+        .reg-img h2 {
+            text-align: center;
+            color: #000000;
+            margin: 24px 0;
+            font-family: Domine;
+        }
+
+        .reg-img p {
+    text-align: center;
+    color: #000000;
+    margin-bottom: 12px;
+    width: 100%;
+    padding-left: 80px;
+    padding-right: 80px;   
+    font-family: 'Montserrat';
+    font-size: 16px;
+}
+
+
+        .form-head h4 {
+            text-align: center;
+            font-size: 18px;
+            font-family: Domine;
+        }
+
+        .form-head h6 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 14px;
+            font-family: Montserrat;
+        }
+
+        #form {
+            width: 300px;
+            height: 625px;
+            margin: 100px auto 0 auto;
+            padding: 20px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 4px;
+            font-size: 12px;
+        }
+
+        #form h2 {
+            color: #0f2027;
+            text-align: center;
+            font-size: 18px;
+            margin: 30px 0px;
+            font-family: Domine;
+        }
+
+        #form button {
+            padding: 10px;
+            margin-top: 10px;
+            width: 100%;
+            color: rgb(255, 255, 255);
+            background-color: #29ded8;
+            border: none;
+            border-radius: 4px;
+            border: 1px solid black;
+            font-size: 14px;
+            font-family: Montserrat;
+        }
+
+        #form .b8 {
+            padding: 10px;
+            margin-top: 10px;
+            width: 100%;
+            color: rgb(0, 0, 0);
+            background-color: #29ded8;
+            border: none;
+            border-radius: 4px;
+            border: 1px solid black;
+            font-size: 14px;
+            font-family: Montserrat;
+            -webkit-text-stroke: 0.5px black;
+        }
+
+        #form .b8:hover {
+            background-color: black;
+            color: #29ded8;
+            transition: 1s;
+            -webkit-text-stroke: 0.5px #29ded8;
+        }
+
+        #form a {
+            float: right;
+            margin-top: 18px;
+            font-size: 16px;
+            border-radius: 4px;
+        }
+
+      
+
+        .input-control input:focus {
+            outline: 0;
+        }
+
+        .input-control.success input {
+            border-color: #09c372;
+        }
+
+        .input-control.error input {
+            border-color: #ff3860;
+        }
+
+        .input-control .error {
+            color: #ff3860;
+            font-size: 9px;
+            height: 24px;
+            padding-top: 6px;
+        }
+
+        #header {
+            height: 114px;
+            z-index: 997;
+            transition: all 0.5s;
+            background: #fff;
+            top: 0px;
+            border-bottom: 1px solid #29ded8;
+        }
+
+        #header.header-scrolled {
+            box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+            top: 0;
+        }
+
+        #header .logo h2 {
+            font-size: 28px;
+            margin: 0;
+            line-height: 1;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        #header .logo h2 a,
+        #header .logo h2 a:hover {
+            color: #354144;
+            text-decoration: none;
+        }
+
+        #header .logo h2 a span,
+        #header .logo h2 a:hover span {
+            color: #01b1d7;
+        }
+
+        #header .logo img {
+            padding: 0 0 0 24px;
+            margin: 0;
+            max-width: 100%;
+        }
+
+        .signup-signin {
+            margin-top: 80px;
+        }
+
+        label {
+            font-family: 'Montserrat';
+        }
+
+        #form a {
+            float: right;
+            margin-top: 18px;
+            font-size: 16px;
+            border: 1px solid #000;
+            padding: 10px 48px;
+            color: #000;
+            text-decoration: none;
+        }
+
+        #form a:hover {
+            background-color: black;
+            color: white;
+            transition: 1s;
+
+        }
+
+        .psd {
+            margin-top: 10px;
+        }
+
+        p {
+            font-family: Montserrat;
+            font-size: 14px;
+        }
+        .form-check-input:checked {
+    background-color: #000000;
+    border-color: #000101;
+}
+.form-check-label1{
+    font-size: 16px;
+    width: 90%;
+    font-family: Domine;
+    text-align: center;
+    padding-top: 2px;
+    margin-left: 7px;
+
+}
+.form-check-input[type=checkbox] {
+    border: 1px solid black;
+    font-size: large;
+}
+.form-check {
+padding-top: 20px;
+padding-left: 80px;
+}
+.form-check-label{
+    width: 240px;
+    font-size: 16px;
+    font-family: Domine;
+    padding-top: 2px;
+
+}
+.form-check1{
+    text-align: center;
+    padding-top: 25px;
+    display: flex;
+    margin-top: 120px;
+    padding-left: 15px;
+    
+}
+footer.footer {
+            margin-top: 200px;
+        }
+
+
+        .input-control
+{
+   position: relative;
+}
+.input
+{
+   padding: 10px;
+   width: 100%;
+   max-width: 300px;
+   box-sizing: border-box;
+   outline: none;
+    border: 1px solid #3a3a3a;
+    border-radius: 4px;
+}
+.placeholder1
+{
+    position: absolute;
+    top: 10px;
+    left: 18px;
+    font-size: 14px;
+    padding: 0px 5px;
+    color: #666;
+    transition: 0.3s;
+    pointer-events: none;
+}
+.placeholder0
+{
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    font-size: 14px;
+    padding: 0px 5px;
+    color: #666;
+    transition: 0.3s;
+    pointer-events: none;
+}
+.input:focus + .placeholder1,
+.input:not(:placeholder-shown) + .placeholder1
+{
+    top: -10px;
+    color: #000000;
+    background-color: #fff;
+    transition: 0.3s all;
+}
+.input:focus + .placeholder0,
+.input:not(:placeholder-shown) + .placeholder0
+{
+    top: -10px;
+    color: #000000;
+    background-color: #fff;
+}
+
+
+h5 {
+    overflow: hidden;
+    text-align: center;
+}
+h5:before,
+h5:after {
+    background-color: #000;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+}
+h5:before {
+    right: 0.5em;
+    margin-left: -50%;
+}
+h5:after {
+    left: 0.5em;
+    margin-right: -50%;
+}
+h5{
+    margin-top: 20px;
+}
+
+    </style>
+     
+
+</head>
+
+<body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-center">
+        <div class="container-fluid d-flex align-items-center justify-content-between">
+            <div class="logo">
+                <a href="index.html"><img src="./assets/img/Box_Logo_1_1(1).png" alt=""></a>
+                <!-- Uncomment below if you prefer to use an image logo -->
+                <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+            </div>
+        </div>
+    </header><!-- End Header -->
+
+    <section class="signup-signin">
+        <div class="container">
+            <div class="row">
+                <div class="col-7">
+                    <div class="reg-img">
+                        <h2>Today's Offer</h2>
+                        <img src="./assets/img/easy-create-2.png" alt="">
+                        <h2><span>REGISTER</span> & Claim Now!</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti qui nisi numquam est facilis
+                        ipsam dolore rem aliquam nam, voluptatum ipsum commodi hic fugit beatae, quaerat, quidem dolores
+                        ad harum.</p>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <form id="form" action="connect.php" method="post">
+                        <div class="form-head">
+                            <h4>Welcome to the family!</h4>
+                            <h6>We're so happy you're here.</h6>
+                            <button class="btn btn-lg btn-block btn-primary" style="background-color: #dd4b39;"
+              type="button"><i class="fab fa-google me-2"></i> Sign Up with google</button>
+            <button class="btn btn-lg btn-block btn-primary mb-2" style="background-color: #3b5998;"
+              type="button"><i class="fab fa-facebook-f me-2"></i>Sign Up with facebook</button>
+             
+         <h5>Or</h5>
+                            
+                        </div>
+                        <h2>Create an account</h2>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="input-control">
+                                    <input type="text" class="input" id="username" name="username" placeholder=" ">
+                                     <label for="username" class="placeholder0">First Name</label>
+                                     <div class="error"></div>
+                                    </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="input-control">
+                                    <input type="text" class="input" id="password2" name="password2" placeholder=" ">
+                                     <label for="password2" class="placeholder0">Last Name</label>
+                                     <div class="error"></div>
+                            </div>
+                        </div>
+
+                        <div class="input-control">
+                            <input type="email" class="input" id="email" name="email" placeholder=" ">
+                             <label for="email" class="placeholder1">Email</label>
+                             <div class="error"></div>
+                    </div>
+                    <div class="input-control">
+                        <input type="password" class="input" id="password" name="password" placeholder=" ">
+                         <label for="password" class="placeholder1">Password</label>
+                         <div class="error"></div>
+                </div>
+                        <div class="terms">
+                            <p>By signing up, you agree to Shutterfly’s Terms and Privacy Policy.</p>
+                        </div>
+<div class="btn">
+    <button class="b8" type="submit">SIGN UP</button>
+    <a href="./login.html">ALREADY A MEMBER ?</a>
+</div>
+                   
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                              Keep me signed in
+                            </label>
+                          </div>
+                        </form>
+                          
+                  
+                   
+                 
+                </div>
+                <div class="form-check1">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                    <label class="form-check-label1" for="defaultCheck1">
+                      Yes i agree to recieve offers and promotions by email and mail
+                    </label>
+                    
+                  </div>
+                  <hr>
+            </div>
+        </div>
+        
+    </section>
+ <!-- Footer -->
+ <footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="copyright" style="text-align: center;">
+                &copy; 2023 <strong><span>Happy Dooki</span></strong>. All Rights Reserved
+            </div>
+        </div>
+
+    </div>
+</footer>
+<!-- footer -->
+    <script>
+        const form = document.getElementById('form');
+        const username = document.getElementById('username');
+        const email = document.getElementById('email');
+        const password = document.getElementById('password');
+        const password2 = document.getElementById('password2');
+
+        form.addEventListener('submit', e => {
+            // e.preventDefault();
+
+            validateInputs();
+        });
+
+        const setError = (element, message) => {
+            const inputControl = element.parentElement;
+            const errorDisplay = inputControl.querySelector('.error');
+
+            errorDisplay.innerText = message;
+            inputControl.classList.add('error');
+            inputControl.classList.remove('success')
+        }
+
+        const setSuccess = element => {
+            const inputControl = element.parentElement;
+            const errorDisplay = inputControl.querySelector('.error');
+
+            errorDisplay.innerText = '';
+            inputControl.classList.add('success');
+            inputControl.classList.remove('error');
+        };
+
+        const isValidEmail = email => {
+            const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(String(email).toLowerCase());
+        }
+
+        const validateInputs = () => {
+            const usernameValue = username.value.trim();
+            const emailValue = email.value.trim();
+            const passwordValue = password.value.trim();
+            const password2Value = password2.value.trim();
+
+            if (usernameValue === '') {
+                setError(username, 'First name is required');
+            } else {
+                setSuccess(username);
+            }
+
+            if (emailValue === '') {
+                setError(email, 'Email is required');
+            } else if (!isValidEmail(emailValue)) {
+                setError(email, 'Provide a valid email address');
+            } else {
+                setSuccess(email);
+            }
+
+            if (passwordValue === '') {
+                setError(password, 'Password is required');
+            } else if (passwordValue.length < 8) {
+                setError(password, 'Password must be at least 8 character.')
+            } else {
+                setSuccess(password);
+            }
+
+            if (password2Value === '') {
+                setError(password2, 'Last name is required');
+            } else if (password2Value !== passwordValue) {
+                setError(password2, "Passwords doesn't match");
+            } else {
+                setSuccess(password2);
+            }
+
+        };
+
+    </script>
+      <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

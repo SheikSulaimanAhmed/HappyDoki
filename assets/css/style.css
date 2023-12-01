@@ -1,0 +1,1559 @@
+/**
+* Template Name: MyBiz
+* Updated: May 30 2023 with Bootstrap v5.3.0
+* Template URL: https://bootstrapmade.com/mybiz-free-business-bootstrap-theme/
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+*/
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #444444;
+}
+
+a {
+  color: #01b1d7;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0dd3fe;
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  background: #01b1d7;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  transition: all 0.4s;
+}
+
+.back-to-top i {
+  font-size: 28px;
+  color: #fff;
+  line-height: 0;
+}
+
+.back-to-top:hover {
+  background: #03d1fe;
+  color: #fff;
+}
+
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Top Bar
+--------------------------------------------------------------*/
+#topbar {
+  background: #2a2d2d;
+  color: #ffffff;
+  border-bottom: 1px solid #eee;
+  font-size: 18px;
+  height: 43px;
+  padding: 0;
+  transition: all 0.5s;
+  overflow: hidden;
+  z-index: 996;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: italic;
+  line-height: 2.78;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#topbar.topbar-scrolled {
+  top: -44px;
+}
+
+#topbar .contact-info i {
+  font-style: normal;
+  color: #01b1d7;
+}
+
+#topbar .contact-info i a,
+#topbar .contact-info i span {
+  padding-left: 5px;
+  color: #444444;
+}
+
+#topbar .contact-info i a {
+  line-height: 0;
+  transition: 0.3s;
+}
+
+#topbar .contact-info i a:hover {
+  color: #01b1d7;
+}
+
+#topbar .social-links a {
+  color: #62787d;
+  padding: 4px 12px;
+  display: inline-block;
+  line-height: 1px;
+  transition: 0.3s;
+  border-left: 1px solid #e9e9e9;
+}
+
+#topbar .social-links a:hover {
+  color: #01b1d7;
+}
+
+#topbar .social-links a:first-child {
+  border-left: 0;
+}
+
+.bluey {
+  color: #2aded8;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  height: 114px;
+  z-index: 997;
+  transition: all 0.5s;
+  background: #fff;
+  top: 44px;
+}
+
+#header.header-scrolled {
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+  top: 0;
+}
+
+#header .logo h1 {
+  font-size: 28px;
+  margin: 0;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+#header .logo h1 a,
+#header .logo h1 a:hover {
+  color: #354144;
+  text-decoration: none;
+}
+
+#header .logo h1 a span,
+#header .logo h1 a:hover span {
+  color: #01b1d7;
+}
+
+#header .logo img {
+  padding: 0 0 0 24px;
+  margin: 0;
+  max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/**
+* Desktop Navigation 
+*/
+.navbar {
+  padding: 0;
+  float: right;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0 42px 0 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar a,
+.navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 10px 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #707070;
+  transition: 0.3s;
+  line-height: 1.27;
+  letter-spacing: normal;
+}
+
+.navbar a i,
+.navbar a:focus i {
+  font-size: 18px;
+  line-height: 0;
+  margin-right: 8px;
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover>a {
+  color: #2aded8;
+}
+
+.navbar .dropdown ul {
+  display: block;
+  position: absolute;
+  left: 30px;
+  top: calc(100% + 30px);
+  margin: 0;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  transition: 0.3s;
+}
+
+.navbar .dropdown ul li {
+  min-width: 200px;
+}
+
+.navbar .dropdown ul a {
+  padding: 10px 20px;
+  font-size: 14px;
+  text-transform: none;
+  font-weight: 400;
+}
+
+.navbar .dropdown ul a i {
+  font-size: 12px;
+}
+
+.navbar .dropdown ul a:hover,
+.navbar .dropdown ul .active:hover,
+.navbar .dropdown ul li:hover>a {
+  color: #2aded8;
+}
+
+.navbar .dropdown:hover>ul {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+}
+
+.navbar .dropdown .dropdown ul {
+  top: 0;
+  left: calc(100% - 30px);
+  visibility: hidden;
+}
+
+.navbar .dropdown .dropdown:hover>ul {
+  opacity: 1;
+  top: 0;
+  left: 100%;
+  visibility: visible;
+}
+
+@media (max-width: 1366px) {
+  .navbar .dropdown .dropdown ul {
+    left: -90%;
+  }
+
+  .navbar .dropdown .dropdown:hover>ul {
+    left: -100%;
+  }
+}
+
+/**
+* Mobile Navigation 
+*/
+.mobile-nav-toggle {
+  color: #354144;
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+  line-height: 0;
+  transition: 0.5s;
+}
+
+.mobile-nav-toggle.bi-x {
+  color: #fff;
+}
+
+@media (max-width: 991px) {
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+}
+
+.navbar-mobile {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(31, 38, 39, 0.9);
+  transition: 0.3s;
+  z-index: 999;
+}
+
+.navbar-mobile .mobile-nav-toggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.navbar-mobile ul {
+  display: block;
+  position: absolute;
+  top: 55px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  padding: 10px 0;
+  background-color: #fff;
+  overflow-y: auto;
+  transition: 0.3s;
+}
+
+.navbar-mobile a,
+.navbar-mobile a:focus {
+  padding: 10px 20px;
+  font-size: 15px;
+  color: #354144;
+}
+
+.navbar-mobile a:hover,
+.navbar-mobile .active,
+.navbar-mobile li:hover>a {
+  color: #01b1d7;
+}
+
+.navbar-mobile .getstarted,
+.navbar-mobile .getstarted:focus {
+  margin: 15px;
+}
+
+.navbar-mobile .dropdown ul {
+  position: static;
+  display: none;
+  margin: 10px 20px;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 1;
+  visibility: visible;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+}
+
+.navbar-mobile .dropdown ul li {
+  min-width: 200px;
+}
+
+.navbar-mobile .dropdown ul a {
+  padding: 10px 20px;
+}
+
+.navbar-mobile .dropdown ul a i {
+  font-size: 12px;
+}
+
+.navbar-mobile .dropdown ul a:hover,
+.navbar-mobile .dropdown ul .active:hover,
+.navbar-mobile .dropdown ul li:hover>a {
+  color: #01b1d7;
+}
+
+.navbar-mobile .dropdown>.dropdown-active {
+  display: block;
+}
+
+
+
+#topHalf {
+  height: 57px;
+}
+
+#topHalf ul {
+  float: right;
+}
+
+#bottomHalf {
+  height: 57px
+}
+
+#bottomHalf ul {
+  float: right;
+}
+.nav-icons{
+  font-size: 12px;
+}
+/*--------------------------------------------------------------
+# After NAV
+--------------------------------------------------------------*/
+.after-nav {
+  /* height: 75px; */
+  background-color: #eef4f4;
+  margin-top: 151px;
+}
+
+.tag-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 11.3px 0px;
+  font-family: 'Domine', serif;
+  font-size: 25px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.96;
+  letter-spacing: -0.25px;
+  color: #000;
+}
+
+.vertical-line {
+  border-left: 1px solid #707070;
+  height: 52.5px;
+  margin-left: 32.5px;
+}
+
+.after-nav-slogun {
+  width: 110px;
+  height: 49px;
+  margin: 1.5px 0 2px 43.5px;
+  opacity: 0.8;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.42;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000;
+}
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(31, 38, 39, 0.8);
+  overflow: hidden;
+  position: relative;
+  padding: 0;
+  margin-top: 8px;
+}
+
+#hero .carousel-item {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+#hero .carousel-item::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.37);
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+#hero .carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 575px;
+  margin-left: 41px;
+  margin-top: 93px;
+}
+
+#hero .carousel-content {
+  text-align: center;
+}
+
+#hero h2 {
+  margin-bottom: 30px;
+  font-family: Domine;
+  font-size: 45px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.22;
+  letter-spacing: -0.45px;
+  text-align: left;
+  color: #fff;
+}
+
+#hero p {
+  animation-delay: 0.4s;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+  text-align: left;
+  color: #fff;
+}
+
+#hero .carousel-inner .carousel-item {
+  transition-property: opacity;
+  background-position: center top;
+}
+
+#hero .carousel-inner .carousel-item,
+#hero .carousel-inner .active.carousel-item-start,
+#hero .carousel-inner .active.carousel-item-end {
+  opacity: 0;
+}
+
+#hero .carousel-inner .active,
+#hero .carousel-inner .carousel-item-next.carousel-item-start,
+#hero .carousel-inner .carousel-item-prev.carousel-item-end {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+#hero .carousel-inner .carousel-item-next,
+#hero .carousel-inner .carousel-item-prev,
+#hero .carousel-inner .active.carousel-item-start,
+#hero .carousel-inner .active.carousel-item-end {
+  left: 0;
+  transform: translate3d(0, 0, 0);
+}
+
+#hero .carousel-control-prev,
+#hero .carousel-control-next {
+  width: 10%;
+}
+
+#hero .carousel-control-next-icon,
+#hero .carousel-control-prev-icon {
+  background: none;
+  font-size: 48px;
+  line-height: 1;
+  width: auto;
+  height: auto;
+}
+
+#hero .carousel-indicators li {
+  cursor: pointer;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0 4px;
+  transition: ease-in;
+  opacity: 0.7;
+}
+
+#hero .carousel-indicators li.active {
+  opacity: 1;
+  background-color: #01b1d7;
+}
+
+#hero .btn-get-started {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.14;
+  letter-spacing: 0.14px;
+  text-align: left;
+  color: #3d3d3d;
+  display: inline-block;
+  margin: 10px;
+  animation-delay: 0.8s;
+  padding: 3.1px 27.5px;
+  border-radius: 5px;
+  border: solid 1px #707070;
+  background-color: #fff;
+}
+
+#hero .btn-get-started:hover {
+  background: #019cbe;
+}
+
+@media (max-width: 768px) {
+  #hero {
+    height: 90vh;
+  }
+
+  #hero .carousel-item {
+    height: 90vh;
+  }
+
+  #hero h2 {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 1024px) {
+  #hero p {
+    width: 60%;
+  }
+
+  #hero .carousel-control-prev,
+  #hero .carousel-control-next {
+    width: 5%;
+  }
+}
+
+@media (max-height: 500px) {
+  #hero {
+    height: 150vh;
+  }
+
+  #hero .carousel-item {
+    height: 150vh;
+  }
+}
+
+.carousel-nav {
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 40px;
+}
+
+.carousel-nav a {
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  display: inline-block;
+}
+
+.carousel-nav a:hover {
+  color: #ffffff;
+}
+
+.carousel-nav a.active:before {
+  content: "";
+  bottom: -1px;
+  left: 32px;
+  right: 0;
+  position: absolute;
+  border-bottom: 4px solid #2aded8;
+  width: 309px;
+}
+
+.carousel-nav {
+  position: absolute;
+  top: 563px;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, .6);
+  color: #fff;
+}
+/*--------------------------------------------------------------
+# Easy to create, made to last
+--------------------------------------------------------------*/
+.easy-create {
+  margin-top: 68px;
+}
+
+.easy-create-col {
+  padding: 0 5%;
+}
+
+.easy-create .content img {
+  max-width: 100%;
+}
+
+.easy-create .content h2 {
+  font-family: Domine;
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.8;
+  letter-spacing: -0.3px;
+  text-align: center;
+  color: #000;
+  margin-top: 39px;
+}
+
+.easy-create .content p {
+  font-family: Montserrat;
+  font-size: 15px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.67;
+  letter-spacing: normal;
+  text-align: center;
+  color: #3a3636;
+  margin-top: 16px;
+  padding: 0 40px;
+}
+
+.easy-create .content a {
+  font-family: Montserrat;
+  font-size: 15px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.67;
+  letter-spacing: normal;
+  text-align: center;
+  color: #3a3636;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 34px;
+  border-bottom: 3px solid #2aded8;
+  width: fit-content;
+  /* text-decoration: underline 3px #2aded8; */
+  margin-left: 39%;
+}
+
+.easy-create .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.easy-create .content ul li {
+  padding: 10px 0 0 28px;
+  position: relative;
+}
+
+.easy-create .content ul i {
+  left: 0;
+  top: 7px;
+  position: absolute;
+  font-size: 20px;
+  color: #01b1d7;
+}
+
+.easy-create .content p:last-child {
+  margin-bottom: 0;
+}
+
+.easy-create-title h3 {
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.11;
+  letter-spacing: normal;
+  text-align: left;
+  color: #d90707;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.easy-create-title h2 {
+  font-family: Domine;
+  font-size: 40px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.6;
+  letter-spacing: -0.4px;
+  text-align: center;
+  color: #000;
+  text-align: center;
+  margin-bottom: 68px;
+}
+@media (min-width: 1440px){
+  .easy-create-col {
+    padding: 0 8%;
+}
+}
+
+/*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+.portfolio {
+  background-color: #f7f7f7;
+  margin-top: 70px;
+  padding-top: 70px;
+  padding-bottom: 80px;
+}
+
+.portfolio .portfolio-item {
+  margin-bottom: 15px;
+  padding: 0 8.5px;
+}
+
+.portfolio #portfolio-flters {
+  padding: 0;
+  margin: 0 0 35px 0;
+  list-style: none;
+  text-align: center;
+}
+
+.shop-items-heading h2 {
+  font-family: Domine;
+  font-size: 40px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.6;
+  letter-spacing: -0.4px;
+  text-align: center;
+  color: #000;
+  margin-bottom: 71px;
+}
+
+.portfolio #portfolio-flters li {
+  cursor: pointer;
+  margin: 0 15px 15px 0;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 12px;
+  line-height: 20px;
+  color: #444444;
+  border-radius: 4px;
+  text-transform: uppercase;
+  background: #fff;
+  margin-bottom: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.portfolio #portfolio-flters li:hover,
+.portfolio #portfolio-flters li.filter-active {
+  background: #01b1d7;
+  color: #fff;
+}
+
+.portfolio #portfolio-flters li:last-child {
+  margin-right: 0;
+}
+
+.portfolio .portfolio-wrap {
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.portfolio .portfolio-wrap img {
+  transition: 0.3s;
+}
+
+.portfolio .portfolio-wrap h1 {
+  font-family: Domine;
+  font-size: 28px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.86;
+  letter-spacing: -0.28px;
+  text-align: center;
+  color: #000;
+  margin-top: 23px;
+}
+
+.portfolio .portfolio-wrap p {
+  font-family: Montserrat;
+  font-size: 13px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: -0.15px;
+  text-align: center;
+  color: #3a3636;
+  margin-bottom: 30px;
+  margin-top: 5px;
+  padding: 0 24px;
+}
+
+.portfolio .portfolio-wrap .portfolio-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: 0.3s;
+  text-align: center;
+  background: rgba(53, 65, 68, 0.6);
+  padding-bottom: 30px;
+}
+
+.offer-lable {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  top: 33%;
+  left: 0;
+  right: 0;
+  transition: 0.3s;
+  text-align: center;
+  /* padding: 6px 12px; */
+  /* background-color: #2aded8; */
+  transition: 0.3s;
+}
+
+.offer-lable a {
+  background-color: #2aded8;
+  font-family: Montserrat;
+  font-size: 13px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.31;
+  letter-spacing: -0.26px;
+  text-align: left;
+  color: #fff;
+  padding: 5.5px 14px;
+  transition: 0.3s;
+}
+
+.offer-lable:hover {
+  transform: scale(1.1);
+  top: 39%;
+}
+
+.portfolio .portfolio-wrap .portfolio-info h4 {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.portfolio .portfolio-wrap .portfolio-info p {
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.portfolio .portfolio-wrap .portfolio-info .portfolio-links {
+  display: flex;
+}
+
+.portfolio .portfolio-wrap .portfolio-info .portfolio-links a {
+  color: #01b1d7;
+  margin: 0 4px;
+  background-color: #fff;
+  border-radius: 50px;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio .portfolio-wrap .portfolio-info .portfolio-links a i {
+  font-size: 18px;
+  line-height: 0;
+}
+
+.portfolio .portfolio-wrap .portfolio-info .portfolio-links a:hover {
+  background: #01b1d7;
+  color: #fff;
+}
+
+.portfolio .portfolio-wrap:hover {
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.16);
+}
+
+.portfolio .portfolio-wrap:hover .portfolio-info {
+  opacity: 1;
+  padding-bottom: 0;
+}
+
+.portfolio .portfolio-wrap:hover img {
+  transform: scale(1.1);
+}
+@media (min-width:1400px){
+  .offer-lable {
+    inset: 38% 0px 0px;
+}
+.offer-lable:hover {
+  transform: scale(1.1);
+  top: 45%;
+}
+.portfolio .portfolio-wrap h1 {
+
+  font-size: 28px;
+
+}
+
+.portfolio .portfolio-wrap p {
+
+  font-size: 15px;
+}
+
+}
+
+/* Personalized Section */
+.personalized-img {
+
+  position: absolute;
+}
+.personalized-img img{
+  height: 417px;
+  width: 98.5%;
+}
+
+.personalized{
+  margin-top: 30px;
+  margin-bottom: 91px;
+}
+.personalized-text h3 {
+  width: 293px;
+  height: 107px;
+  font-family: Domine;
+  font-size: 45px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.22;
+  letter-spacing: -0.45px;
+  text-align: left;
+  color: #000;
+}
+
+.personalized-text p {
+  width: 418px;
+  height: 84px;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+  text-align: left;
+  color: #575757;
+}
+
+.personalized-text .btn {
+  width: 134px;
+  height: 38px;
+}
+
+.personalized-text {
+  position: relative;
+  padding-left: 59px;
+  padding-top: 89px;
+}
+
+/* 
+
+/* Fathers day section */
+.fathersdaytext {
+  width: 100%;
+  height: 395px;
+  background-color: #01bfbf;
+  padding-top: 62px;
+  padding-left: 61px;
+}
+
+.fathersdaytext h3 {
+  width: 536px;
+  height: 107px;
+  font-family: Domine;
+  font-size: 45px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.22;
+  letter-spacing: -0.45px;
+  text-align: left;
+  color: #fff;
+}
+
+.fathersdaytext p {
+  width: 527px;
+  height: 84px;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+  text-align: left;
+  color: #fff;
+  margin-top: 15px;
+}
+
+.fathersdaytext .btn {
+  width: 201px;
+  height: 38px;
+  border-radius: 5px;
+  border: solid 1px #707070;
+  background-color: #fff;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: 0.14px;
+  color: #3d3d3d;
+
+}
+
+.fathersdaytext .btn {
+  margin-top: 20px;
+  width: 241px;
+  height: 38px;
+  border-radius: 5px;
+  border: solid 1px #707070;
+  background-color: #fff;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: 0.14px;
+  color: #3d3d3d;
+
+}
+
+.fathersdayimg img {
+  width: 100%;
+  height: 811px;
+}
+
+.fathersday {
+  margin-top: 118px;
+}
+
+.fatherimg {
+  margin-top: 24px;
+}
+
+.fatherimg img {
+  width: 100%;
+  height: 390px;
+}
+/*--------------------------------------------------------------
+# Easy to create, made to last
+--------------------------------------------------------------*/
+.wall-arts-sec {
+  margin-top: 85px;
+}
+
+.wall-arts-col {
+  padding: 0 5%;
+}
+
+.wall-arts-sec .content img {
+  max-width: 100%;
+}
+
+.wall-arts-sec .content h2 {
+  font-family: Domine;
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.8;
+  letter-spacing: -0.3px;
+  text-align: center;
+  color: #000;
+  margin-top: 39px;
+}
+
+.wall-arts-sec .content p {
+  font-family: Montserrat;
+  font-size: 15px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.67;
+  letter-spacing: normal;
+  text-align: center;
+  color: #3a3636;
+  margin-top: 16px;
+  padding: 0 40px;
+}
+
+.wall-arts-sec .content a {
+  font-family: Montserrat;
+  font-size: 15px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.67;
+  letter-spacing: normal;
+  text-align: center;
+  color: #3a3636;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 34px;
+  border-bottom: 3px solid #2aded8;
+  width: fit-content;
+  /* text-decoration: underline 3px #2aded8; */
+  margin-left: 39%;
+}
+
+.wall-arts-sec .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.wall-arts-sec .content ul li {
+  padding: 10px 0 0 28px;
+  position: relative;
+}
+
+.wall-arts-sec .content ul i {
+  left: 0;
+  top: 7px;
+  position: absolute;
+  font-size: 20px;
+  color: #01b1d7;
+}
+
+.wall-arts-sec .content p:last-child {
+  margin-bottom: 0;
+}
+
+.wall-arts-title h2 {
+  font-family: Domine;
+  font-size: 45px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.22;
+  letter-spacing: -0.45px;
+  text-align: center;
+  color: #000;
+  margin-bottom: 68px;
+}
+@media (min-width: 1440px){
+  .wall-arts-col {
+    padding: 0 8%;
+}
+}
+/*Wedding Section*/
+
+.weddingdaytext {
+  width: 100%;
+  height: 395px;
+  background-color: #f37b7b;
+  padding-top: 62px;
+  padding-left: 61px;
+}
+
+.weddingdaytext h3 {
+  width: 536px;
+  height: 107px;
+  font-family: Domine;
+  font-size: 45px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.22;
+  letter-spacing: -0.45px;
+  text-align: left;
+  color: #fff;
+}
+
+.weddingdaytext p {
+  width: 527px;
+  height: 84px;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+  text-align: left;
+  color: #fff;
+  margin-top: 15px;
+}
+
+.weddingdaytext .btn {
+  margin-top: 20px;
+  width: 120px;
+  height: 38px;
+  border-radius: 5px;
+  border: solid 1px #707070;
+  background-color: #fff;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: 0.14px;
+  color: #3d3d3d;
+
+}
+
+.weddingdaytext .b2 {
+  width: 150px;
+  height: 38px;
+  border-radius: 5px;
+  border: solid 1px #707070;
+  background-color: #fff;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: 0.14px;
+  color: #3d3d3d;
+}
+
+.weddingdaytext .b3 {
+  width: 220px;
+  height: 38px;
+  border-radius: 5px;
+  border: solid 1px #707070;
+  background-color: #fff;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: 0.14px;
+  color: #3d3d3d;
+}
+
+.weddingdayimg img {
+  width: 100%;
+  height: 811px;
+}
+
+.wedding {
+  margin-top: 200px;
+}
+
+.weddingimg {
+  margin-top: 24px;
+}
+
+.weddingimg img {
+  width: 100%;
+  height: 390px;
+}
+/*--------------------------------------------------------------
+# Services & ideas
+--------------------------------------------------------------*/
+.Services-ideas{
+  background-color: #f7f7f7;
+  padding: 30px 166px 46px;
+  margin-top: 30px;
+}
+.Services-ideas-cantent h1{
+  font-family: Domine;
+  font-size: 40px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.6;
+  letter-spacing: -0.4px;
+  text-align: center;
+  color: #000;
+  margin-bottom: 12px;
+}
+.Services-ideas-cantent p{
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+  text-align: center;
+  color: #575757;
+}
+
+/* Memories Section */
+.memories-img {
+  position: absolute;
+}
+.memories-img img{
+  height: 456px;
+  width: 98.5%;
+}
+
+.memories-text {
+  position: relative;
+  padding-top: 108px;
+  padding-left: 131px;
+
+}
+
+.memories-text h3 {
+  width: 457px;
+  height: 146px;
+  font-family: Domine;
+  font-size: 40px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: -0.4px;
+  text-align: left;
+  color: #000;
+}
+.memories{
+  margin-top: 100px;
+}
+
+
+
+
+/*  */
+/*--------------------------------------------------------------
+# About us
+--------------------------------------------------------------*/
+.about-us{
+  margin-top: 30px;
+}
+.about-us-cn{
+  background-color: #f8f8f8;
+  padding: 102px 114px;
+}
+.about-us-cn h1{
+  font-family: Domine;
+  font-size: 40px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: -0.4px;
+  text-align: left;
+  color: #000;
+}
+.about-us-cn p{
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+  text-align: left;
+  color: #575757;
+  margin-bottom: 39px;
+}
+.about-content h1{
+  font-family: Domine;
+  font-size: 25px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.96;
+  letter-spacing: -0.25px;
+  text-align: left;
+  color: #000;
+  margin-top: 21px;
+}
+.about-content p{
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+  text-align: left;
+  color: #575757;
+  margin-top: 13px;
+  
+}
+.about-us-img img{
+  max-width: 100%;
+}
+/*--------------------------------------------------------------
+# before-footer
+--------------------------------------------------------------*/
+.before-footer{
+  background-color: #2aded7;
+  margin-top: 30px;
+}
+/*--------------------------------------------------------------
+# footer
+--------------------------------------------------------------*/
+.footer{
+  background-color: #273131;
+  padding-top: 51px;
+}
+.footer-logo{
+  display: flex;
+  justify-content: center;
+}
+#footer .footer-top .footer-links {
+  margin-bottom: 30px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul i {
+  padding-right: 2px;
+  color: #40dcfe;
+  font-size: 18px;
+  line-height: 1;
+}
+
+ .footer-links ul li {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+ .footer-links ul li:first-child {
+  padding-top: 0;
+}
+
+.footer-links ul a {
+  color: #fff;
+  transition: 0.3s;
+  display: inline-block;
+  line-height: 1;
+}
+.footer-line{
+ border: solid 1px #e4e4e4;
+ margin: 21.5px 0px;
+}
